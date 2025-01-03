@@ -1,5 +1,7 @@
 // Implement Function.prototype.bind()
 
+// refer to theory section as well
+
 /*
     const foo = function() {
         console.log(this.bar);

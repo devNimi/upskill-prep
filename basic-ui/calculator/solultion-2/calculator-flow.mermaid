@@ -1,0 +1,51 @@
+graph TD
+    %% Main Initialization
+    init[Constructor] --> eventInit[initializeEventListeners]
+    eventInit --> clickListener[Click Event Listener]
+    eventInit --> keyListener[Keyboard Event Listener]
+
+    %% Input Processing
+    clickListener --> handleInput[handleInput]
+    keyListener --> handleKeyboard[handleKeyboard]
+    handleKeyboard --> handleInput
+
+    %% Input Validation
+    handleInput --> isValidInput[isValidInput]
+    isValidInput --> getCurrentNumber[getCurrentNumber]
+
+    %% Main Logic Flow
+    handleInput --> switchCase{Switch Case}
+    switchCase -->|"= pressed"| calculate[calculate]
+    switchCase -->|"AC pressed"| clear[clear]
+    switchCase -->|"default"| appendValue[appendValue]
+
+    %% Calculation Chain
+    calculate --> validateExpression[validateExpression]
+    validateExpression --> evaluateExpression[evaluateExpression]
+    evaluateExpression --> formatResult[formatResult]
+
+    %% Display Updates
+    calculate --> updateDisplay[updateDisplay]
+    clear --> updateDisplay
+    appendValue --> updateDisplay
+
+    %% Error Handling
+    calculate --> |error| handleError[handleError]
+    validateExpression --> |error| handleError
+    evaluateExpression --> |error| handleError
+
+    %% Function Descriptions
+    init[/"Constructor
+    Initializes state"/]
+    eventInit[/"Setup event listeners"/]
+    handleInput[/"Process all inputs"/]
+    handleKeyboard[/"Handle keyboard events"/]
+    isValidInput[/"Validate operators & decimals"/]
+    calculate[/"Perform calculation"/]
+    clear[/"Reset calculator"/]
+    appendValue[/"Add to expression"/]
+    validateExpression[/"Check expression syntax"/]
+    evaluateExpression[/"Compute result"/]
+    formatResult[/"Format decimal places"/]
+    updateDisplay[/"Update UI"/]
+    handleError[/"Handle errors"/]

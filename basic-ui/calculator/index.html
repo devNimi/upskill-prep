@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="description" content="A simple calculator application" />
+  </head>
+  <body>
+    <main>
+      <form class="calculator" onsubmit="handleSubmit(event)">
+        <!-- Calculator display with ARIA support -->
+        <output
+          id="display-output"
+          class="calculator-display"
+          aria-live="polite"
+          aria-label="calculation result"
+        >
+          0
+        </output>
+
+        <!-- Calculator grid -->
+        <div class="calculator-grid">
+          <!-- Row 1 -->
+          <div class="calculator-row">
+            <button
+              type="button"
+              value="AC"
+              class="btn btn-special"
+              aria-label="clear all"
+            >
+              AC
+            </button>
+            <button
+              type="button"
+              value="%"
+              class="btn btn-operator"
+              aria-label="percentage"
+            >
+              %
+            </button>
+            <button
+              type="button"
+              value="/"
+              class="btn btn-operator"
+              aria-label="divide"
+            >
+              /
+            </button>
+            <button
+              type="button"
+              value="*"
+              class="btn btn-operator"
+              aria-label="multiply"
+            >
+              ×
+            </button>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="calculator-row">
+            <button type="button" value="7" class="btn btn-number">7</button>
+            <button type="button" value="8" class="btn btn-number">8</button>
+            <button type="button" value="9" class="btn btn-number">9</button>
+            <button
+              type="button"
+              value="-"
+              class="btn btn-operator"
+              aria-label="subtract"
+            >
+              -
+            </button>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="calculator-row">
+            <button type="button" value="4" class="btn btn-number">4</button>
+            <button type="button" value="5" class="btn btn-number">5</button>
+            <button type="button" value="6" class="btn btn-number">6</button>
+            <button
+              type="button"
+              value="+"
+              class="btn btn-operator"
+              aria-label="add"
+            >
+              +
+            </button>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="calculator-row">
+            <button type="button" value="1" class="btn btn-number">1</button>
+            <button type="button" value="2" class="btn btn-number">2</button>
+            <button type="button" value="3" class="btn btn-number">3</button>
+            <button
+              type="button"
+              value="("
+              class="btn btn-operator"
+              aria-label="open parenthesis"
+            >
+              (
+            </button>
+          </div>
+
+          <!-- Row 5 -->
+          <div class="calculator-row">
+            <button type="button" value="0" class="btn btn-number">0</button>
+            <button
+              type="button"
+              value="."
+              class="btn btn-number"
+              aria-label="decimal point"
+            >
+              .
+            </button>
+            <button
+              type="button"
+              value="="
+              class="btn btn-equals"
+              aria-label="equals"
+            >
+              =
+            </button>
+            <button
+              type="button"
+              value=")"
+              class="btn btn-operator"
+              aria-label="close parenthesis"
+            >
+              )
+            </button>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <!-- Scripts -->
+    <!-- <script src="./index.js" defer></script> -->
+    <!-- un comment line below to test solution 2, comment out the line above as well -->
+    <script src="./solultion-2/index.js" defer></script>
+  </body>
+</html>

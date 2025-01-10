@@ -150,7 +150,8 @@ main {
 }
 
 /* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
+
+[data-theme="dark"] {
   body {
     background-color: #121212;
   }

@@ -1,0 +1,47 @@
+/* Theme Toggle Styles */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 2px solid #e9ecef;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Light theme styles */
+.theme-toggle {
+  color: #333;
+  background: #fff;
+}
+
+.theme-toggle:hover {
+  background: #f8f9fa;
+  transform: translateY(-1px);
+}
+
+/* Dark theme styles */
+[data-theme="dark"] .theme-toggle {
+  color: #fff;
+  background: #2d2d2d;
+  border-color: #3d3d3d;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background: #3d3d3d;
+}
+
+/* Add icon animations */
+.theme-toggle .icon {
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover .icon {
+  transform: rotate(45deg);
+}

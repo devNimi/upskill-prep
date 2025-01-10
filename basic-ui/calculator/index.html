@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/toggle.css" />
     <meta name="description" content="A simple calculator application" />
   </head>
   <body>
@@ -135,9 +136,19 @@
       </form>
     </main>
 
+    <section>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="icon">🌓</span>
+        <span class="text">Theme</span>
+      </button>
+    </section>
     <!-- Scripts -->
-    <!-- <script src="./index.js" defer></script> -->
+    <!-- <script src="./js/index.js" defer></script> -->
     <!-- un comment line below to test solution 2, comment out the line above as well -->
-    <script src="./solultion-2/index.js" defer></script>
+    <script src="./js/solultion-2/index.js" defer></script>
+
+    <!-- Theme handler -->
+    <!-- <script src="./js/theme.js" defer></script> -->
+    <script src="./js/solultion-2/theme.js" defer></script>
   </body>
 </html>
